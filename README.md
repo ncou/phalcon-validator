@@ -2,7 +2,7 @@
 Make your apps validation easily (inspired by Zend Validation)
 
 
-For additional information see [cua luoi chong muoi](https://cualuoichongmuoi.xyz).
+Chuyên kinh doanh sản xuất cửa lưới chống muỗi giá rẻ và [cua luoi chong muoi](https://cualuoichongmuoi.xyz) nhập khẩu, các loại cửa lưới ngăn muỗi tại công ty việt thống đều được bảo hành chính hãng 3 năm
 
 <a name="license"></a>
 ## License
