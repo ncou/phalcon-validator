@@ -1,6 +1,15 @@
 # phalcon-validator
 Make your apps validation easily (inspired by Zend Validation)
 
+# Installation
+Create the `composer.json` file as follows:
+```json
+{
+    "require": {
+        "tnt2306/phalcon-validator": "dev-master" 
+    }
+}
+```
 
 Chuyên kinh doanh sản xuất cửa lưới chống muỗi giá rẻ và [cua luoi chong muoi](https://cualuoichongmuoi.xyz) nhập khẩu, các loại cửa lưới ngăn muỗi tại công ty việt thống đều được bảo hành chính hãng 3 năm
 
