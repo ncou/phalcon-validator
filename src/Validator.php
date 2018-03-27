@@ -3,13 +3,11 @@
 namespace Tnt2306\Validator;
 
 use Tnt2306\Validator\Helpers\ValidatorFacade;
-use Tnt2306\Validator\Rules\BaseRule;
 use Tnt2306\Validator\Helpers\RulesFactory;
 
 final class Validator {
 
     private static $validatorFacade = null;
-    private static $config = [];
     
     public static function make(array $data, array $rules, array $userMessages = []) {
         self::$validatorFacade = new ValidatorFacade($userMessages);
@@ -41,10 +39,7 @@ final class Validator {
                     $ruleValue = isset($ruleNameParam[1]) ? $ruleNameParam[1] : '';
                 }
 
-                //self::$config[BaseRule::CONFIG_DATA] = $data;
-               // self::$config[BaseRule::CONFIG_FIELD_RULES] = $fieldRules;
-
-                $ruleInstance = RulesFactory::createRule($ruleName, self::$config, [
+                $ruleInstance = RulesFactory::createRule($ruleName, [
                     $fieldName,                                        // The field name
                     isset($data[$fieldName]) ? $data[$fieldName] : '', // The provided value
                     $ruleValue,                                        // The rule's value
@@ -58,13 +53,6 @@ final class Validator {
         return self::$validatorFacade;
     }
 
-    /**
-     * Prepare user data for validator.
-     *
-     * @param array $data
-     *
-     * @return array
-     */
     private static function prepareData(array $data) {
         $newData = [];
 
@@ -81,14 +69,6 @@ final class Validator {
         return $newData;
     }
 
-    /**
-     * Merges all field's rules into one
-     * if you have elegant implementation, you are welcome.
-     *
-     * @param array $rules
-     *
-     * @return array
-     */
     private static function prepareRules(array $rules) {
         $mergedRules = [];
 

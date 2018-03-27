@@ -5,7 +5,7 @@ namespace Tnt2306\Validator\Helpers;
 class RulesFactory
 {
 
-    public static function createRule($ruleName, $config, $params)
+    public static function createRule($ruleName, $params)
     {
         $ruleName = ucfirst($ruleName);
        
@@ -15,7 +15,7 @@ class RulesFactory
       
         $class = 'Tnt2306\\Validator\\Rules\\'.$ruleName;
         
-        $ruleInstance = new $class($config);
+        $ruleInstance = new $class();
         
         $ruleInstance->setParams($params);
         return $ruleInstance;
