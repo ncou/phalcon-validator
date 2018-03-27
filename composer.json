@@ -1,0 +1,27 @@
+{
+    "name": "tnt2306/phalcon-validator",
+    "type": "library",
+    "description": "Make your apps validation easily (inspired by Zend Validation) ",
+    "keywords": ["zend","validator", "phalcon"],
+    "homepage": "https://github.com/tnt2306/phalcon-validator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nguyen Tran Trung",
+            "email": "tnt2306@gmail.com",
+            "homepage": "https://vfplus.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "zendframework/zend-validator": "^2.10",
+        "zendframework/zend-filter": "^2.7",
+        "zendframework/zend-uri": "^2.5" 
+    },
+    "autoload": {
+        "psr-4": {
+            "Tnt2306\\Validator\\": "src/"
+        }
+    }
+}
